@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-color: rgb(158, 120, 71);
+}
+
+header {
+    padding: 30px;
+    text-align:none;
+    background-color:srgb rgb(172, 135, 87);
+}
+
+.title {
+    font-size: 50px;
+    color: rgb(235, 240, 244);
+    text-align: center;
+}
+
+section {
+    background-color: rgb(217, 205, 189);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+section h2 {
+    font-size: 20px;
+    color: rgb(185, 83, 16);
+    text-align: none;
+    margin-bottom: 20px;
+}

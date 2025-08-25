@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-color: rgb(158, 120, 71);
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    background-color:srgb rgb(172, 135, 87);
+}
+
+.title {
+    font-size: 50px;
+    color: rgb(235, 240, 244);
+}
+
+nav {
+    background-color: rgb(221, 173, 40);
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    color: rgb(215, 208, 201);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

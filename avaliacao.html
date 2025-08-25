@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Avaliação</title>
+   <link rel="stylesheet" href="style9.css">
+  </head>
+  
+  <body>
+    <header>
+      <h1 class="title">Avaliação dos clientes</h1>
+    </header>
+
+    <!-- Avaliações já existentes -->
+    <section class="avaliacoes">
+      <h2>⭐ Avaliações dos Clientes</h2>
+
+      <div class="avaliacao">
+        <h3>Maria Silva</h3>
+        <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        <p>"Comida maravilhosa, atendimento impecável. Voltarei sempre!"</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>João Pereira</h3>
+        <p class="estrelas">⭐⭐⭐⭐</p>
+        <p>"As massas são incríveis e o ambiente super acolhedor."</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Ana Souza</h3>
+        <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        <p>"Melhor restaurante italiano que já fui em Goiânia!"</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Lucas Fernandes</h3>
+        <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        <p>"O frango caipira me lembrou a comida da minha avó. Sensacional!"</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Beatriz Oliveira</h3>
+        <p class="estrelas">⭐⭐⭐⭐</p>
+        <p>"A pizza é deliciosa, mas o que me conquistou foi o atendimento atencioso."</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Ricardo Gomes</h3>
+        <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        <p>"Ambiente aconchegante, ótimo para reunir a família."</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Fernanda Lima</h3>
+        <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        <p>"A lasanha é simplesmente perfeita! Super recomendo."</p>
+      </div>
+
+      <div class="avaliacao">
+        <h3>Pedro Henrique</h3>
+        <p class="estrelas">⭐⭐⭐⭐</p>
+        <p>"Boa variedade de vinhos e sobremesas incríveis."</p>
+      </div>
+    </section>
+
+    <section class="nova-avaliacao">
+      <h2>Deixe sua Avaliação</h2>
+      <form id="formAvaliacao">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" required><br><br>
+
+        <label for="estrelas">Nota:</label><br>
+        <select id="estrelas" required>
+          <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+          <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+          <option value="⭐⭐⭐">⭐⭐⭐</option>
+          <option value="⭐⭐">⭐⭐</option>
+          <option value="⭐">⭐</option>
+        </select><br><br>
+
+        <label for="comentario">Comentário:</label><br>
+        <textarea id="comentario" rows="4" required></textarea><br><br>
+
+        <button type="submit">Enviar Avaliação</button>
+      </form>
+    </section>
+    <script>
+      document.getElementById("formAvaliacao").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const estrelas = document.getElementById("estrelas").value;
+        const comentario = document.getElementById("comentario").value;
+
+        const novaAvaliacao = document.createElement("div");
+        novaAvaliacao.classList.add("avaliacao");
+        novaAvaliacao.innerHTML = `
+          <h3>${nome}</h3>
+          <p class="estrelas">${estrelas}</p>
+          <p>"${comentario}"</p>
+        `;
+
+        document.querySelector(".avaliacoes").appendChild(novaAvaliacao);
+
+        document.getElementById("formAvaliacao").reset();
+      });
+    </script>
+  </body>
+</html>
